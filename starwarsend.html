@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars Quiz - End Screen</title>
+    <link rel="stylesheet" href="starwarsend.css"> 
+</head>
+<body>
+    <div class="container">
+        <h1 class="main-title">Thanks For Playing</h1>
+        <a href="starwarsquiz.html" class="button">PLAY AGAIN</a>
+        <a href="starwarsquizmenu.html" class="button">MAIN MENU</a>
+    </div>
+
+    <script>
+        // Assuming score is passed from the quiz page, e.g., through URL parameters or a saved value
+        const urlParams = new URLSearchParams(window.location.search);
+        const score = urlParams.get('score') || 0;
+        document.querySelector('.final-score').textContent = score;
+    </script>
+</body>
+</html>
